@@ -1,17 +1,18 @@
 import React from 'react';
 import { FaRegHeart } from "react-icons/fa";
 
-const Card = () => {
+const Card = ({car}) => {
+    const {img, make, model, year, rentalPrice} = car;
   return (
     <li>
-        <img src="" alt="" />
-        <h3></h3>
+        <img src={img} alt="car" />
+        <h3>{make}{model}, <span>{year}</span> <span>&#36;{rentalPrice}</span></h3>
         <span></span>
-        <ul>
+        {/* <ul>
            {tags.map(tag => {
             return <span>{tag} </span>
             })} 
-        </ul>
+        </ul> */}
         <button type="button">Learn more</button>
         <FaRegHeart size="18px"/>
     </li>

@@ -1,0 +1,1 @@
+export const listAllCars = state => state.catalog.generalList;
