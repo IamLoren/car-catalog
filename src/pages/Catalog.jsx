@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchcarsThunk } from '../redux/catalogSlice/operations';
 import { listAllCars } from '../redux/selectors.js';
-import Card from '../components/Card/Card.jsx';
+import CarsList from '../components/CarsList/CarsList.jsx';
 
 const Catalog = () => {
     const dispatch = useDispatch();
@@ -11,14 +11,11 @@ const Catalog = () => {
         dispatch(fetchcarsThunk())
     },[dispatch])
 
-     const allCars = useSelector(listAllCars);
+     const carsForRender = useSelector(listAllCars);
   return (
-    <ul>
-        {allCars?.map(car => {
-          return  <Card key={car.id} car={car}/>
-        })}
-    </ul>
+   <CarsList carsForRender={carsForRender}/>
   )
 }
 
 export default Catalog
+

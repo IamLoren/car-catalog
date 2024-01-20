@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import Container from "../components/Container/Container";
+import IconsLine from "../components/IconsLine/IconsLine";
+import HomeDescription from "../components/HomeDescription/HomeDescription";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <section>
+      <Container>
+        <HomeDescription />
+        <IconsLine />
+      </Container>
+    </section>
+  );
+};
 
-export default Home
+export default Home;
