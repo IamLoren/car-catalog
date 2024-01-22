@@ -9,7 +9,7 @@ import Global from './css/common.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter /*basename="/car-catalog"*/>
+  <BrowserRouter basename="/car-catalog">
     <Provider store={store}>
         <App />
         <Global/>
