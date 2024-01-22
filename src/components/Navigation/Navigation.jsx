@@ -1,21 +1,25 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import Container from "../Container/Container";
+import { StyledLink, StyledNav, StyledUl } from "./Navigation.styled";
 
 const Navigation = () => {
   return (
-    <nav>
-      <ul>
+  
+    <StyledNav>
+      <Container>
+        <StyledUl>
         <li>
-          <NavLink to={"/"}>Home</NavLink>
+          <StyledLink to={"/"}>Home</StyledLink>
         </li>
         <li>
-          <NavLink to={"catalog"}>Catalog</NavLink>
+          <StyledLink to={"catalog"}>Catalog</StyledLink>
         </li>
         <li>
-          <NavLink to={"favorites"}>Favorites</NavLink>
+          <StyledLink to={"favorites"}>Favorites</StyledLink>
         </li>
-      </ul>
-    </nav>
+      </StyledUl>
+      </Container>
+    </StyledNav>
   );
 };
 

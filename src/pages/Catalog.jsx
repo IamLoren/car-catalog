@@ -1,21 +1,71 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchcarsThunk } from '../redux/catalogSlice/operations';
-import { listAllCars } from '../redux/selectors.js';
-import CarsList from '../components/CarsList/CarsList.jsx';
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  fetchAllcarsThunk,
+  fetchcarsThunk,
+} from "../redux/catalogSlice/operations";
+import {
+  AdvertAmount,
+  filtersForCatalog,
+  listAllCars,
+} from "../redux/selectors.js";
+import CarsList from "../components/CarsList/CarsList.jsx";
+import Filters from "../components/Filters/Filters.jsx";
+import AnySearchResult from "./AnySearchResult/AnySearchResult.jsx";
+import Container from "../components/Container/Container.jsx";
+import { StyledButton, StyledP } from "./Catalog.styled.js";
 
 const Catalog = () => {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  const filters = useSelector(filtersForCatalog);
+  const amount = useSelector(AdvertAmount);
+  const [page, setPage] = useState(2);
 
-    useEffect(() => {
-        dispatch(fetchcarsThunk())
-    },[dispatch])
+  const addMoreCards = (p) => {
+    setPage(page + 1);
+    dispatch(fetchcarsThunk(p));
+  };
 
-     const carsForRender = useSelector(listAllCars);
+  useEffect(() => {
+    dispatch(fetchcarsThunk(1));
+    dispatch(fetchAllcarsThunk());
+  }, [dispatch]);
+
+  const allCars = useSelector(listAllCars);
+  const carsForRender = allCars
+    .filter((car) =>
+      car.make.toLowerCase().includes(filters?.brand?.toLowerCase())
+    )
+    .filter(
+      (car) =>
+        parseInt(car.rentalPrice.replace(/\D/g, ""), 10) <=
+        +filters?.selectedOption?.value
+    )
+    .filter((car) => car.mileage > filters.from && car.mileage < filters.to);
   return (
-   <CarsList carsForRender={carsForRender}/>
-  )
-}
 
-export default Catalog
+    <Container>
+      <Filters />
+      <CarsList
+        carsForRender={
+          Object.keys(filters).length === 0 ? allCars : carsForRender
+        }
+      />
+      {Object.keys(filters).length !== 0 && carsForRender.length === 0 && (
+        <AnySearchResult />
+      )}
+      {allCars.length !== amount && (
+        <StyledButton onClick={() => addMoreCards(page)} type="button">
+          Load more
+        </StyledButton>
+      )}
+      {allCars.length === amount && (
+        <StyledP>
+          There are all the car rental offers we have for you today
+        </StyledP>
+      )}
+    </Container>
+  );
+};
 
+export default Catalog;

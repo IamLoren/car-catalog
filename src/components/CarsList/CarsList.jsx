@@ -1,22 +1,24 @@
-import React from 'react';
-import styled from 'styled-components';
-import Card from '../Card/Card.jsx';
+import { createPortal } from "react-dom";
+import Card from "../Card/Card.jsx";
+import { useSelector } from "react-redux";
+import { isModalOpen } from "../../redux/selectors.js";
+import Modal from "../Modal/Modal.jsx";
+import { StyledCarsList } from "./CarsList.styled.js";
 
-const CarsList = ({carsForRender}) => {
+const CarsList = ({ carsForRender }) => {
+  const isModal = useSelector(isModalOpen);
 
   return (
-    <StyledUl>
-    {carsForRender?.map(car => {
-      return  <Card key={car?.id} car={car}/>
-    })}
-</StyledUl>
-  )
-}
+    <>
+    <StyledCarsList>
+      {carsForRender?.map((car) => {
+        return <Card key={car?.id} car={car} />;
+      })}
+      {isModal && createPortal(<Modal />, document.querySelector("#root"))}
+    </StyledCarsList>
+    
+    </>
+  );
+};
 
-export default CarsList
-
-const StyledUl = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-`;
+export default CarsList;
