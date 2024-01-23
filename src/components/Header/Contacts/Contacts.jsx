@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+
+import { CiSun } from "react-icons/ci";
+import { FaRegMoon } from "react-icons/fa";
 import logo from "../../../img/logo.png";
-import { StyledAddress, StyledDivWrapper, StyledPCall } from "./Contacts.styled";
+import { StyledAddress, StyledDivWrapper, StyledPCall, StyledToggle } from "./Contacts.styled";
 import Container from "../../Container/Container";
 
 const Contacts = () => {
+  const [theme, setTheme] = useState(true);
+  const handleTheme = () => {
+    setTheme(!theme);
+  };
   return (
     <Container>
     <StyledDivWrapper>
@@ -15,6 +22,14 @@ const Contacts = () => {
         <a href="tel:+380730000000">+380730000000</a>
         <a href="mailto: carrent@gmail.com">Email: carrent@gmail.com</a>
       </StyledAddress>
+
+  <StyledToggle
+    defaultChecked={theme}
+    icons={{
+      checked: <CiSun size="15px"/>,
+      unchecked: <FaRegMoon size="15px" color="white"/>,
+    }}
+    onChange={handleTheme} />
     </StyledDivWrapper>
     </Container>
   );

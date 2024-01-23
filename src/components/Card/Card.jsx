@@ -22,7 +22,8 @@ import BigButton from "../BigButton/BigButton.jsx";
 
 const Card = ({ car }) => {
   const {
-    img = `https://kor.ill.in.ua/m/610x385/2238421.jpg`,
+    img,
+    photoLink,
     address,
     make,
     model,
@@ -59,7 +60,7 @@ const Card = ({ car }) => {
   return (
     <StyledLi>
       <ImgWrapperDiv>
-        <img src={img} alt="car" />
+        <img src={img ? img : photoLink} alt="car" />
       </ImgWrapperDiv>
 
       <StyledH>
@@ -87,7 +88,7 @@ const Card = ({ car }) => {
           className="heart"
           size="25px"
           onClick={handleFavoriteClick}
-          style={{ color: isFavorite ? "blue" : "black" }}
+          style={{ fill: isFavorite && "blue", color: isFavorite ? "blue" : "white"}}
         />
       </StyledSpanTooltip>
     </StyledLi>

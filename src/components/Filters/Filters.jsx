@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import Select from "react-select";
 import { changeFilters } from "../../redux/catalogSlice/catalogSlice";
-import { StyledButton, StyledForm } from "./Filters.styled";
+import { StyledButton, StyledForm, StyledSelect } from "./Filters.styled";
 
 const priceOptions = [
   { value: "30", label: "30$" },
@@ -32,49 +31,50 @@ const Filters = () => {
     dispatch(changeFilters({ brand, selectedOption, from, to }));
   };
   return (
-      <StyledForm onSubmit={filtersCombiner}>
-        <div>
-          <label htmlFor="#brand"> Car brand</label>
-          <input
-            name="brand"
-            type="text"
-            id="brand"
-            onChange={(e) => setBrand(e.target.value)}
-            placeholder="Enter the text"
-          />
-        </div>
-        <div>
-          <label htmlFor="#select">Price/ 1 hour</label>
-          <Select
-            id="select"
-            defaultValue={selectedOption}
-            onChange={(option) => setSelectedOption(option)}
-            options={priceOptions}
-          />
-        </div>
+    <StyledForm onSubmit={filtersCombiner}>
+      <div>
+        <label htmlFor="#brand"> Car brand</label>
+        <input
+          name="brand"
+          type="text"
+          id="brand"
+          onChange={(e) => setBrand(e.target.value)}
+          placeholder="Enter the text"
+        />
+      </div>
+      <div>
+        <label htmlFor="#select">Price/ 1 hour</label>
+        <StyledSelect
+          id="select"
+          defaultValue={selectedOption}
+          onChange={(option) => setSelectedOption(option)}
+          options={priceOptions}
+          placeholder="To $"
+        />
+      </div>
 
-        <div>
-          <label htmlFor="#miles">Car mileage / km</label>
-          <input
-            name="from"
-            type="number"
-            min={0}
-            step="10"
-            onChange={(e) => setFrom(Number(e.target.value))}
-            placeholder="from"
-          />
-          <input
-            name="to"
-            type="number"
-            min={0}
-            step="10"
-            onChange={(e) => setTo(Number(e.target.value))}
-            placeholder="to"
-          />
-        </div>
+      <div>
+        <label htmlFor="#miles">Car mileage / km</label>
+        <input
+          name="from"
+          type="number"
+          min={0}
+          step="10"
+          onChange={(e) => setFrom(Number(e.target.value))}
+          placeholder="from"
+        />
+        <input
+          name="to"
+          type="number"
+          min={0}
+          step="10"
+          onChange={(e) => setTo(Number(e.target.value))}
+          placeholder="to"
+        />
+      </div>
 
-        <StyledButton type="submit">Search</StyledButton>
-      </StyledForm>
+      <StyledButton type="submit">Search</StyledButton>
+    </StyledForm>
   );
 };
 

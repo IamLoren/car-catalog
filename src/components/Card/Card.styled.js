@@ -1,4 +1,4 @@
-import { FaHeart } from "react-icons/fa";
+import { FiHeart } from "react-icons/fi";
 import { Tooltip } from "react-tooltip";
 import styled from "styled-components";
 
@@ -73,7 +73,7 @@ export const StyledTooltip = styled(Tooltip)`
   }
 `;
 
-export const StyledHeart = styled(FaHeart)`
+export const StyledHeart = styled(FiHeart)`
   &.heart {
   }
 `;

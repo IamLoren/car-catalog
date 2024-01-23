@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchAllcarsThunk,
@@ -6,7 +6,9 @@ import {
 } from "../redux/catalogSlice/operations";
 import {
   AdvertAmount,
+  carsForFilters,
   filtersForCatalog,
+  isFirsRender,
   listAllCars,
 } from "../redux/selectors.js";
 import CarsList from "../components/CarsList/CarsList.jsx";
@@ -14,12 +16,15 @@ import Filters from "../components/Filters/Filters.jsx";
 import AnySearchResult from "./AnySearchResult/AnySearchResult.jsx";
 import Container from "../components/Container/Container.jsx";
 import { StyledButton, StyledP } from "./Catalog.styled.js";
+import { changeFirstRender } from "../redux/catalogSlice/catalogSlice.js";
 
 const Catalog = () => {
   const dispatch = useDispatch();
+const firstRender = useSelector(isFirsRender);
   const filters = useSelector(filtersForCatalog);
   const amount = useSelector(AdvertAmount);
   const [page, setPage] = useState(2);
+  const carsForFiltration = useSelector(carsForFilters);
 
   const addMoreCards = (p) => {
     setPage(page + 1);
@@ -27,12 +32,17 @@ const Catalog = () => {
   };
 
   useEffect(() => {
-    dispatch(fetchcarsThunk(1));
-    dispatch(fetchAllcarsThunk());
-  }, [dispatch]);
+    if (firstRender) { 
+      dispatch(changeFirstRender(false))
+      dispatch(fetchcarsThunk(1));
+      dispatch(fetchAllcarsThunk());
+    } else{
+     return
+    }
+  }, [dispatch, firstRender]);
 
   const allCars = useSelector(listAllCars);
-  const carsForRender = allCars
+  const carsForRender = carsForFiltration
     .filter((car) =>
       car.make.toLowerCase().includes(filters?.brand?.toLowerCase())
     )

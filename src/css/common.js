@@ -39,14 +39,18 @@ body{
   color: var(--tags-color);
 }
 
-// input:-webkit-autofill,
-// input:-webkit-autofill:hover, 
-// input:-webkit-autofill:focus,
-// input:-webkit-autofill:active {
-//     transition: background-color 5000s ease-in-out 0s;
-//     background-color: inherit !important;
-//     color: var(--text-forms);
-// }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color); /* колір самого скрола */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: lightgray; /* колір треку скрола */
+}
 
 @media screen and (min-width: 767px) and (max-width: 1279px) {
   body {

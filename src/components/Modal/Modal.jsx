@@ -3,9 +3,14 @@ import { carForModal } from "../../redux/selectors";
 import { IoMdClose } from "react-icons/io";
 import {
   ImgWrapperDiv,
+  StyledAccentSpan,
   StyledCloseButton,
   StyledDescriptionWrapper,
   StyledDropWrapper,
+  StyledLink,
+  StyledP,
+  StyledUlAccessories,
+  StyledUlConditions,
 } from "./Modal.styled";
 import { changeModalOpen } from "../../redux/catalogSlice/catalogSlice";
 import { useEffect } from "react";
@@ -18,6 +23,7 @@ const Modal = () => {
     type,
     id,
     img,
+    photoLink,
     make,
     model,
     year,
@@ -29,7 +35,7 @@ const Modal = () => {
     functionalities,
     rentalConditions,
   } = car || {};
-  const arrOfRentalConditions = rentalConditions.split(/ (?=[A-Z])/);
+  const arrOfRentalConditions = [...rentalConditions.split(/ (?=[A-Z])/), `Mileage: ${mileage.toLocaleString('en')}`, `Price: ${parseInt(rentalPrice.replace(/\D/g, ""), 10)}$`];
   const adressForRender = address.split(",").reverse().splice(0, 2);
   const dispatch = useDispatch();
 
@@ -59,16 +65,16 @@ const Modal = () => {
         !e.target.closest("article") && closeModal()}>
       <article>
         <ImgWrapperDiv>
-          <img src={img} alt="car" />
+          <img src={img ? img : photoLink} alt="car" />
         </ImgWrapperDiv>
         <StyledDescriptionWrapper>
           <h2>
-            {make}
-            <span>{model}</span>, <span>{year}</span>
+            {make}&nbsp;
+            <StyledAccentSpan>{model}</StyledAccentSpan>, <span>{year}</span>
           </h2>
           <ul>
-            {adressForRender.map((tag) => {
-              return <li>&nbsp; {tag} | </li>;
+            {adressForRender.map((tag,index) => {
+              return <li key={index}>&nbsp; {tag} | </li>;
             })}
             <li>&nbsp; Id: {id} | </li>
             <li>&nbsp; Year: {year} | </li>
@@ -76,8 +82,8 @@ const Modal = () => {
             <li>&nbsp; Fuel Consumption: {fuelConsumption} | </li>
             <li>&nbsp; Engine Size: {engineSize} </li>
           </ul>
-          <p>{description}</p>
-          <ul>
+          <StyledP>{description}</StyledP>
+          <StyledUlAccessories>
             Accessories and functionalities: <br />
             {accessories.map((item, index) => (
               <li key={index}>&nbsp;{item} |</li>
@@ -87,31 +93,23 @@ const Modal = () => {
                 &nbsp;{item} {index !== functionalities.length - 1 && "|"}
               </li>
             ))}
-          </ul>
+          </StyledUlAccessories>
 
-          <ul>
-            Rental Conditions:
-            {arrOfRentalConditions.map((item) => (
-              <li>
-                {item.includes(":")
-                  ? item.split(":").map((word, index) => (
-                      <span key={index}>
-                        {word}
-                        {index !== item.split(":").length - 1 && ":"}
-                      </span>
-                    ))
-                  : item}
-              </li>
-            ))}
-            <li>
-              Mileage: <span>{mileage.toLocaleString("en")}</span>
-            </li>
-            <li>
-              Price:{" "}
-              <span>{parseInt(rentalPrice.replace(/\D/g, ""), 10)}&#36;</span>
-            </li>
-          </ul>
-          <a href="tel:+380730000000">Rental car</a>
+          <StyledUlConditions>
+            Rental Conditions: <br />
+            {arrOfRentalConditions.map((item, index) => (
+        <li key={index}>
+          {item.split(/(\d+)/).map((segment, segmentIndex) => (
+            isNaN(Number(segment)) ? (
+              <span key={segmentIndex}>{segment}</span>
+            ) : (
+              <StyledAccentSpan key={segmentIndex}>{segment}</StyledAccentSpan>
+            )
+          ))}
+        </li>
+      ))}
+          </StyledUlConditions>
+          <StyledLink href="tel:+380730000000">Rental car</StyledLink>
         </StyledDescriptionWrapper>
         <StyledCloseButton
           onClick={closeModal}
