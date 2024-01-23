@@ -41,8 +41,8 @@ export const StyledToggle = styled(Toggle)`
     touch-action: pan-x;
     display: inline-block;
     position: absolute;
-    top: 40px;
-    right: 100px;
+    top: 20px;
+    right: 50px;
     cursor: pointer;
     background-color: transparent;
     border: 0;
