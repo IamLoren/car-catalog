@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/car-catalog/static/css/main.cdc5df85.css",
-    "main.js": "/car-catalog/static/js/main.a318bdce.js",
-    "static/js/920.d8bd0b9e.chunk.js": "/car-catalog/static/js/920.d8bd0b9e.chunk.js",
+    "main.js": "/car-catalog/static/js/main.6c707c91.js",
+    "static/js/920.3519d43e.chunk.js": "/car-catalog/static/js/920.3519d43e.chunk.js",
     "static/css/857.25007c2b.chunk.css": "/car-catalog/static/css/857.25007c2b.chunk.css",
-    "static/js/857.3fd7b2d2.chunk.js": "/car-catalog/static/js/857.3fd7b2d2.chunk.js",
+    "static/js/857.b96dd450.chunk.js": "/car-catalog/static/js/857.b96dd450.chunk.js",
     "static/css/490.25007c2b.chunk.css": "/car-catalog/static/css/490.25007c2b.chunk.css",
     "static/js/490.455e358b.chunk.js": "/car-catalog/static/js/490.455e358b.chunk.js",
     "static/js/300.c41da94b.chunk.js": "/car-catalog/static/js/300.c41da94b.chunk.js",
@@ -23,10 +23,10 @@
     "static/media/mitsubishi.png": "/car-catalog/static/media/mitsubishi.fc3c892543a20a29dcee.png",
     "index.html": "/car-catalog/index.html",
     "main.cdc5df85.css.map": "/car-catalog/static/css/main.cdc5df85.css.map",
-    "main.a318bdce.js.map": "/car-catalog/static/js/main.a318bdce.js.map",
-    "920.d8bd0b9e.chunk.js.map": "/car-catalog/static/js/920.d8bd0b9e.chunk.js.map",
+    "main.6c707c91.js.map": "/car-catalog/static/js/main.6c707c91.js.map",
+    "920.3519d43e.chunk.js.map": "/car-catalog/static/js/920.3519d43e.chunk.js.map",
     "857.25007c2b.chunk.css.map": "/car-catalog/static/css/857.25007c2b.chunk.css.map",
-    "857.3fd7b2d2.chunk.js.map": "/car-catalog/static/js/857.3fd7b2d2.chunk.js.map",
+    "857.b96dd450.chunk.js.map": "/car-catalog/static/js/857.b96dd450.chunk.js.map",
     "490.25007c2b.chunk.css.map": "/car-catalog/static/css/490.25007c2b.chunk.css.map",
     "490.455e358b.chunk.js.map": "/car-catalog/static/js/490.455e358b.chunk.js.map",
     "300.c41da94b.chunk.js.map": "/car-catalog/static/js/300.c41da94b.chunk.js.map",
@@ -34,6 +34,6 @@
   },
   "entrypoints": [
     "static/css/main.cdc5df85.css",
-    "static/js/main.a318bdce.js"
+    "static/js/main.6c707c91.js"
   ]
 }
