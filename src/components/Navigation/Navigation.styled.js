@@ -13,10 +13,20 @@ export const StyledUl = styled.ul`
   display: flex;
   justify-content: center;
   gap: 200px;
+
+  @media only screen and (max-width: 767px) {
+    flex-direction: column;
+    gap:20px;
+  }
+
+  & li {
+    @media only screen and (max-width: 767px) {
+    text-align: center;
+  }
+  }
 `;
 
 export const StyledLink = styled(NavLink)`
- 
   padding-bottom: 5px;
   font-family: "Manrope-semibold";
   font-size: 24px;

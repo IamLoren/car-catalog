@@ -8,6 +8,14 @@ export const StyledDivWrapper = styled.div`
   padding-top: 10px;
   padding-bottom: 10px;
 
+  @media only screen and (max-width: 767px) {
+   flex-direction: column;
+
+   & p {
+    margin-bottom: 20px;
+   }
+  }
+
   & a {
     display: block;
   }
@@ -20,6 +28,10 @@ export const StyledPCall = styled.p`
   font-weight: 900;
   color: var(--accent-color);
   text-shadow: 0 0 1px lightgray;
+
+  @media only screen and (max-width: 1430px) {
+    text-align: center;
+  }
 `;
 export const StyledAddress = styled.address`
   display: flex;

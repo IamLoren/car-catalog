@@ -9,6 +9,10 @@ export const StyledDivWrapper = styled.div`
     background-repeat: non-repeat;
     background-position: center;
     padding-top: 140px;
+
+    @media only screen and (max-width: 1430px) {
+        padding-top: 40px;
+      }
 `
 
 export const StyledArticle = styled.article`

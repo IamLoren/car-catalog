@@ -18,6 +18,10 @@ export const StyledForm = styled.form`
   justify-content: center;
   gap: 18px;
 
+  @media only screen and (max-width: 1430px) {
+    flex-wrap: wrap;
+  }
+
   & label {
     display: block;
     margin-bottom: 5px;
