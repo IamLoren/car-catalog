@@ -42,7 +42,7 @@ export const StyledToggle = styled(Toggle)`
     display: inline-block;
     position: absolute;
     top: 40px;
-    right: 100px;
+    right: 50px;
     cursor: pointer;
     background-color: transparent;
     border: 0;
