@@ -13,7 +13,7 @@ export const StyledDivWrapper = styled.div`
 
 export const StyledArticle = styled.article`
 width: 50%;
-    color: var(--white-text);
+    color: var(--description-text);
 
     & h1 {
         font-family: "Manrope-semibold";

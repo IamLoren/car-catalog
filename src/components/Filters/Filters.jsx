@@ -62,6 +62,7 @@ const Filters = () => {
           step="10"
           onChange={(e) => setFrom(Number(e.target.value))}
           placeholder="from"
+          style={{borderRadius: "12px 2px 2px 12px", borderRight: "1px solid lightgray" }}
         />
         <input
           name="to"
@@ -70,6 +71,7 @@ const Filters = () => {
           step="10"
           onChange={(e) => setTo(Number(e.target.value))}
           placeholder="to"
+          style={{borderRadius: "2px 12px 12px 2px", borderLeft: "1px solid lightgray" }}
         />
       </div>
 

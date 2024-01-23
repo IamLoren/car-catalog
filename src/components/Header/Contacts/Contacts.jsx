@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { CiSun } from "react-icons/ci";
 import { FaRegMoon } from "react-icons/fa";
@@ -11,6 +11,15 @@ const Contacts = () => {
   const handleTheme = () => {
     setTheme(!theme);
   };
+
+  useEffect(() => {
+    if(!theme) {
+       document.documentElement.classList.add('page-theme-dark');
+    } else {
+      document.documentElement.classList.remove('page-theme-dark');
+    }
+  }, [theme]);
+
   return (
     <Container>
     <StyledDivWrapper>

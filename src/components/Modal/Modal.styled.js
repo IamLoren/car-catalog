@@ -20,7 +20,8 @@ export const StyledDropWrapper = styled.div`
     min-height: 752px;
     margin: auto;
     padding: 40px 35px;
-    background-color: white;
+    background-color: var(--main-bg);
+    box-shadow: 1px 1px 4px lightgray;
     border-radius: 24px;
   }
 
@@ -103,6 +104,8 @@ export const StyledCloseButton = styled.button`
 `;
 
 export const StyledAccentSpan = styled.span`
+font-size: var(--base-font-size);
+font-weight: 700;
   color: var(--accent-color);
 `;
 
@@ -110,8 +113,15 @@ export const StyledLink = styled.a`
   width: fit-content;
   padding: 12px 50px;
   background-color: var(--accent-color);
-  border: none;
+  border: 1px solid transparent;
   border-radius: 12px;
-  color: var(--white-text);
+  color: var(--description-text);
   margin-top: 10px;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: var(--description-text);
+    color: var(--accent-color);
+    border: 1px solid blue;
+  }
 `;

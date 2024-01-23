@@ -11,6 +11,7 @@ export const StyledDivWrapper = styled.div`
   & a {
     display: block;
   }
+
 `;
 
 export const StyledPCall = styled.p`
@@ -18,12 +19,22 @@ export const StyledPCall = styled.p`
   font-size: 30px;
   font-weight: 900;
   color: var(--accent-color);
+  text-shadow: 0 0 1px lightgray;
 `;
 export const StyledAddress = styled.address`
   display: flex;
   flex-direction: column;
   gap: 25px;
   color: var(--accent-color);
+
+  & a {
+    transition: all 0.3s;
+  }
+
+  & a:hover {
+    transform: scale(1.1);
+    font-weight: 700;
+  }
 `;
 export const StyledToggle = styled(Toggle)`
   &.react-toggle {
