@@ -8,11 +8,11 @@ export const StyledDivWrapper = styled.div`
     background-size: cover;
     background-repeat: non-repeat;
     background-position: center;
-    padding-top: 150px;
+    padding-top: 140px;
 `
 
 export const StyledArticle = styled.article`
-width: 50%;
+width: 45%;
     color: var(--description-text);
 
     & h1 {
