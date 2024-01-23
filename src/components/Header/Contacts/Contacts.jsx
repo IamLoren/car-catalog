@@ -23,7 +23,7 @@ const Contacts = () => {
   return (
     <Container>
     <StyledDivWrapper>
-      <a href="/">
+      <a href="/car-catalog/">
         <img src={logo} alt="" width="150" />
       </a>
       <StyledPCall>Your happy travels are awaiting you!</StyledPCall>
