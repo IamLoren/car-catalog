@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/car-catalog/static/css/main.cdc5df85.css",
-    "main.js": "/car-catalog/static/js/main.6c707c91.js",
-    "static/js/920.3519d43e.chunk.js": "/car-catalog/static/js/920.3519d43e.chunk.js",
+    "main.js": "/car-catalog/static/js/main.240fda5c.js",
+    "static/js/920.f2d9579d.chunk.js": "/car-catalog/static/js/920.f2d9579d.chunk.js",
     "static/css/857.25007c2b.chunk.css": "/car-catalog/static/css/857.25007c2b.chunk.css",
     "static/js/857.b96dd450.chunk.js": "/car-catalog/static/js/857.b96dd450.chunk.js",
     "static/css/490.25007c2b.chunk.css": "/car-catalog/static/css/490.25007c2b.chunk.css",
@@ -23,8 +23,8 @@
     "static/media/mitsubishi.png": "/car-catalog/static/media/mitsubishi.fc3c892543a20a29dcee.png",
     "index.html": "/car-catalog/index.html",
     "main.cdc5df85.css.map": "/car-catalog/static/css/main.cdc5df85.css.map",
-    "main.6c707c91.js.map": "/car-catalog/static/js/main.6c707c91.js.map",
-    "920.3519d43e.chunk.js.map": "/car-catalog/static/js/920.3519d43e.chunk.js.map",
+    "main.240fda5c.js.map": "/car-catalog/static/js/main.240fda5c.js.map",
+    "920.f2d9579d.chunk.js.map": "/car-catalog/static/js/920.f2d9579d.chunk.js.map",
     "857.25007c2b.chunk.css.map": "/car-catalog/static/css/857.25007c2b.chunk.css.map",
     "857.b96dd450.chunk.js.map": "/car-catalog/static/js/857.b96dd450.chunk.js.map",
     "490.25007c2b.chunk.css.map": "/car-catalog/static/css/490.25007c2b.chunk.css.map",
@@ -34,6 +34,6 @@
   },
   "entrypoints": [
     "static/css/main.cdc5df85.css",
-    "static/js/main.6c707c91.js"
+    "static/js/main.240fda5c.js"
   ]
 }
