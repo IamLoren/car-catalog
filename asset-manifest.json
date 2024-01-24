@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/car-catalog/static/css/main.cdc5df85.css",
-    "main.js": "/car-catalog/static/js/main.240fda5c.js",
-    "static/js/920.f2d9579d.chunk.js": "/car-catalog/static/js/920.f2d9579d.chunk.js",
+    "main.css": "/car-catalog/static/css/main.896f56fa.css",
+    "main.js": "/car-catalog/static/js/main.4ea6424f.js",
+    "static/js/749.0b30cad1.chunk.js": "/car-catalog/static/js/749.0b30cad1.chunk.js",
     "static/css/857.25007c2b.chunk.css": "/car-catalog/static/css/857.25007c2b.chunk.css",
     "static/js/857.b96dd450.chunk.js": "/car-catalog/static/js/857.b96dd450.chunk.js",
     "static/css/490.25007c2b.chunk.css": "/car-catalog/static/css/490.25007c2b.chunk.css",
@@ -10,6 +10,7 @@
     "static/js/300.c41da94b.chunk.js": "/car-catalog/static/js/300.c41da94b.chunk.js",
     "static/js/680.7cac3e4d.chunk.js": "/car-catalog/static/js/680.7cac3e4d.chunk.js",
     "static/media/Home-bg.webp": "/car-catalog/static/media/Home-bg.882d73b27f2d7a1bd28c.webp",
+    "static/media/Dark-bg.jpg": "/car-catalog/static/media/Dark-bg.d7871841bd6c5765c474.jpg",
     "static/media/bmw.png": "/car-catalog/static/media/bmw.fde41276e7afb4c4c167.png",
     "static/media/logo.png": "/car-catalog/static/media/logo.ba3bf59dedcf68101685.png",
     "static/media/mazda.png": "/car-catalog/static/media/mazda.4a55ae81b232f6a144ca.png",
@@ -22,9 +23,9 @@
     "static/media/mg.png": "/car-catalog/static/media/mg.02eed9326d86406aed50.png",
     "static/media/mitsubishi.png": "/car-catalog/static/media/mitsubishi.fc3c892543a20a29dcee.png",
     "index.html": "/car-catalog/index.html",
-    "main.cdc5df85.css.map": "/car-catalog/static/css/main.cdc5df85.css.map",
-    "main.240fda5c.js.map": "/car-catalog/static/js/main.240fda5c.js.map",
-    "920.f2d9579d.chunk.js.map": "/car-catalog/static/js/920.f2d9579d.chunk.js.map",
+    "main.896f56fa.css.map": "/car-catalog/static/css/main.896f56fa.css.map",
+    "main.4ea6424f.js.map": "/car-catalog/static/js/main.4ea6424f.js.map",
+    "749.0b30cad1.chunk.js.map": "/car-catalog/static/js/749.0b30cad1.chunk.js.map",
     "857.25007c2b.chunk.css.map": "/car-catalog/static/css/857.25007c2b.chunk.css.map",
     "857.b96dd450.chunk.js.map": "/car-catalog/static/js/857.b96dd450.chunk.js.map",
     "490.25007c2b.chunk.css.map": "/car-catalog/static/css/490.25007c2b.chunk.css.map",
@@ -33,7 +34,7 @@
     "680.7cac3e4d.chunk.js.map": "/car-catalog/static/js/680.7cac3e4d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cdc5df85.css",
-    "static/js/main.240fda5c.js"
+    "static/css/main.896f56fa.css",
+    "static/js/main.4ea6424f.js"
   ]
 }
