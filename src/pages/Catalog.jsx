@@ -25,7 +25,6 @@ const firstRender = useSelector(isFirsRender);
   const amount = useSelector(AdvertAmount);
   const [page, setPage] = useState(2);
   const carsForFiltration = useSelector(carsForFilters);
-
   const addMoreCards = (p) => {
     setPage(page + 1);
     dispatch(fetchcarsThunk(p));
