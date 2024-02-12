@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/car-catalog/static/css/main.896f56fa.css",
-    "main.js": "/car-catalog/static/js/main.de62bcfe.js",
+    "main.js": "/car-catalog/static/js/main.2a68a503.js",
     "static/js/749.0b30cad1.chunk.js": "/car-catalog/static/js/749.0b30cad1.chunk.js",
     "static/css/857.25007c2b.chunk.css": "/car-catalog/static/css/857.25007c2b.chunk.css",
-    "static/js/857.b96dd450.chunk.js": "/car-catalog/static/js/857.b96dd450.chunk.js",
+    "static/js/857.2429e329.chunk.js": "/car-catalog/static/js/857.2429e329.chunk.js",
     "static/css/490.25007c2b.chunk.css": "/car-catalog/static/css/490.25007c2b.chunk.css",
-    "static/js/490.455e358b.chunk.js": "/car-catalog/static/js/490.455e358b.chunk.js",
+    "static/js/490.3757447a.chunk.js": "/car-catalog/static/js/490.3757447a.chunk.js",
     "static/js/300.c41da94b.chunk.js": "/car-catalog/static/js/300.c41da94b.chunk.js",
     "static/js/680.7cac3e4d.chunk.js": "/car-catalog/static/js/680.7cac3e4d.chunk.js",
     "static/media/Home-bg.webp": "/car-catalog/static/media/Home-bg.882d73b27f2d7a1bd28c.webp",
@@ -24,17 +24,17 @@
     "static/media/mitsubishi.png": "/car-catalog/static/media/mitsubishi.fc3c892543a20a29dcee.png",
     "index.html": "/car-catalog/index.html",
     "main.896f56fa.css.map": "/car-catalog/static/css/main.896f56fa.css.map",
-    "main.de62bcfe.js.map": "/car-catalog/static/js/main.de62bcfe.js.map",
+    "main.2a68a503.js.map": "/car-catalog/static/js/main.2a68a503.js.map",
     "749.0b30cad1.chunk.js.map": "/car-catalog/static/js/749.0b30cad1.chunk.js.map",
     "857.25007c2b.chunk.css.map": "/car-catalog/static/css/857.25007c2b.chunk.css.map",
-    "857.b96dd450.chunk.js.map": "/car-catalog/static/js/857.b96dd450.chunk.js.map",
+    "857.2429e329.chunk.js.map": "/car-catalog/static/js/857.2429e329.chunk.js.map",
     "490.25007c2b.chunk.css.map": "/car-catalog/static/css/490.25007c2b.chunk.css.map",
-    "490.455e358b.chunk.js.map": "/car-catalog/static/js/490.455e358b.chunk.js.map",
+    "490.3757447a.chunk.js.map": "/car-catalog/static/js/490.3757447a.chunk.js.map",
     "300.c41da94b.chunk.js.map": "/car-catalog/static/js/300.c41da94b.chunk.js.map",
     "680.7cac3e4d.chunk.js.map": "/car-catalog/static/js/680.7cac3e4d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.896f56fa.css",
-    "static/js/main.de62bcfe.js"
+    "static/js/main.2a68a503.js"
   ]
 }
