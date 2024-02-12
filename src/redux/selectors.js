@@ -6,3 +6,4 @@ export const filtersForCatalog = state => state.catalog.filters;
 export const AdvertAmount = state => state.catalog.amount;
 export const isFirsRender = state => state.catalog.isFirsRender;
 export const carsForFilters = state => state.catalog.allCars;
+export const themeOfSite = state => state.catalog.theme;

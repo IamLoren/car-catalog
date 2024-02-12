@@ -16,7 +16,7 @@ import {
     key: 'favorite',
     version: 1,
     storage,
-    whitelist: ['favoriteList']
+    whitelist: ['favoriteList', 'theme']
   }
 
  const persistedReducer = persistReducer(persistConfig, catalogReducer)

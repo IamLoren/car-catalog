@@ -14,6 +14,7 @@ export const catalogSlice = createSlice({
     isModalOpen: false,
     isLoading: false,
     isFirsRender: true,
+    theme: true
   },
   reducers: {
     changeFirstRender: (state, { payload }) => {
@@ -39,6 +40,9 @@ export const catalogSlice = createSlice({
     },
     changeFilters: (state, { payload }) => {
       state.filters = payload;
+    },
+    changeTheme: (state, { payload }) => {
+      state.theme = payload;
     },
   },
   extraReducers: (builder) => {
@@ -76,5 +80,6 @@ export const {
   deleteFavoriteCar,
   changeCarForModal,
   changeFilters,
+  changeTheme,
 } = catalogSlice.actions;
 export const catalogReducer = catalogSlice.reducer;
